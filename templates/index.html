@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House Price Prediction</title>
+</head>
+<body>
+    <h1>House Price Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="bedrooms">Number of Bedrooms:</label>
+        <input type="number" id="bedrooms" name="bedrooms" required><br><br>
+        <label for="bathrooms">Number of Bathrooms:</label>
+        <input type="number" id="bathrooms" name="bathrooms" required><br><br>
+        <label for="location">Location:</label>
+        <select id="location" name="location" required>
+            <option value="0">Poranki</option>
+            <option value="1">Kankipadu</option>
+            <option value="2">Benz Circle</option>
+            <option value="3">Gannavaram</option>
+            <option value="4">PNT Colony</option>
+            <option value="5">Labbipet</option>
+            <option value="6">Gunadala</option>
+            <option value="7">Gollapudi</option>
+            <option value="8">Enikepadu</option>
+            <option value="9">Vidhyadharpuram</option>
+            <option value="10">Penamaluru</option>
+            <option value="11">Payakapuram</option>
+        </select><br><br>
+        <label for="size">Size (in sqft):</label>
+        <input type="number" id="size" name="size" required><br><br>
+        <label for="status">Status of Property:</label>
+        <select id="status" name="status" required>
+            <option value="0">Resale</option>
+            <option value="1">Under Construction</option>
+            <option value="2">Ready to move</option>
+            <!-- Add more options for other status values -->
+        </select><br><br>
+        <label for="facing">Direction of Facing:</label>
+        <select id="facing" name="facing" required>
+            <option value="0">Not Mentioned</option>
+            <option value="1">East</option>
+            <option value="2">West</option>
+            <option value="3">NorthEast</option>
+            <!-- Add more options for other facing values -->
+        </select><br><br>
+        <label for="type">Type of Property:</label>
+        <select id="type" name="type" required>
+            <option value="0">Apartment</option>
+            <option value="1">Independent House</option>
+            <option value="2">Residential Plot</option>
+            <!-- Add more options for other property types -->
+        </select><br><br>
+        <input type="submit" value="Predict">
+    </form>
+
+    <h1>House Price Prediction Result</h1>
+    <p>Predicted House Price: ₹ {{ predicted_price }} Lakhs</p>
+
+</body>
+</html>
