@@ -1,3 +1,5 @@
-flask==2.2.5
-scikit-learn==1.2.2
-numpy==1.24.3
+#flask==2.2.5
+#scikit-learn==1.2.2
+numpy
+xgboost
+streamlit
